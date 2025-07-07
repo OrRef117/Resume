@@ -1,0 +1,21 @@
+#pragma once
+#include "Tool.h"
+#include "GameSystem.h"
+
+//class King;
+class Bishop : public Tool
+{
+public:
+	Bishop(char type, int color);
+	~Bishop();
+	virtual char getType();
+	virtual int getColor();
+	virtual bool isAlive();
+	virtual void move(string in, string out, char* board, Tool** Tools);
+
+protected:
+	char _type;
+	int _color;
+	bool _hasMoved;
+	bool _hasEat;
+};
